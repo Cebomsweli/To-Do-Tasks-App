@@ -76,7 +76,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("📌 Purple-Themed To-Do List App")
+st.title("📌 Silver To-Do List App")
 
 if 'logged_in' not in st.session_state or not st.session_state['logged_in']:
     username = st.text_input("Enter your username")
@@ -128,6 +128,7 @@ if 'username' in st.session_state and st.session_state['logged_in']:
         tasks.append(task)
         save_user_data(st.session_state['username'], tasks, history, archived)
         st.success("✅ Task added successfully!")
+        st.rerun()
 
     # Function to mark task as done
     def mark_task_done(task_index):
