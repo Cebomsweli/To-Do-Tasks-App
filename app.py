@@ -128,7 +128,7 @@ if 'username' in st.session_state and st.session_state['logged_in']:
         tasks.append(task)
         save_user_data(st.session_state['username'], tasks, history, archived)
         st.success("✅ Task added successfully!")
-        st.rerun()
+        
 
     # Function to mark task as done
     def mark_task_done(task_index):
